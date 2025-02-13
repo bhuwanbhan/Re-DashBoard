@@ -2,10 +2,22 @@ import React from 'react'
 
 function Dash() {
   return (
-    <div className='sm:mx-75 sm:mt-5 sm:px-auto '>
-   <h2 className='sm:text-3xl font-bold  '>Ecommerce Dashboard</h2>
-   <p>Here’s what’s going on at your business right now</p>
-    </div>
+     <div className='h-screen bg-amber-300 flex'>
+
+    <div className='lg:mx-78  h-screen  '>
+
+        
+            <h2 className='text-3xl font-bold mt-7'>Ecommerce Dashboard</h2>
+            <p className='text-gray-600'>Here’s what’s going on at your business right now</p>
+
+        </div>
+
+        </div>
+
+   
+
+ 
+   
   )
 }
 
