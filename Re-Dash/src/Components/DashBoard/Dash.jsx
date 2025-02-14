@@ -21,25 +21,9 @@ function Dash() {
             <span className='text-xs  ms-7   '> On hold </span> </p>
             <p className='mt-7 space-x-3 '><FontAwesomeIcon icon={faStar}/> <span className='font-bold text-xl '>15 products</span> <br />
             <span className='text-xs ms-9  '> Out of stock</span> </p>
-
-           
             </div>
             </div>
             </div>
-       
-       <div>
-        <div className='grid gap-4 sm:grid-cols-12   h-50 '>
-          <div className='ms:col-span-4  lg:col-span-4 rounded-xl  '></div>
-          <div className=' bg-amber-600 shadow-xl col-span-4 rounded-xl'></div>
-          <div className='  bg-amber-600 shadow-xl col-span-4 rounded-xl '></div>
-          <div className=' shadow-xl col-span-4 rounded-xl'></div>
-          <div className='  bg-amber-600 shadow-xl col-span-4 rounded-xl'></div>
-          <div className='  bg-amber-600 shadow-xl col-span-4 rounded-xl'></div>
-          
-        </div>
-       </div>
-         
-       
 </div>
 )
 }
