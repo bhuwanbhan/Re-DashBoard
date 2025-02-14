@@ -1,0 +1,35 @@
+#Sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: aliceblue;
+    list-style: none;
+    padding: 10px 20px 80px 20px;
+}
+
+#Sidebar li{
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: all 100ms ease-in;
+}
+
+#Sidebar li:hover{
+    background-color: thistle;
+    border-radius: 15px;
+}
+
+#icon{
+    margin-right:10px;
+}
+
+#spanSidebar{
+    color: grey;
+    margin-left: 10px;
+}
+
+@media (max-width: 950px){
+    #Sidebar{
+        display: none;
+    }
+}

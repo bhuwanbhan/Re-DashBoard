@@ -3,11 +3,8 @@ import './App.css'
 import Login from './Components/Auth/Login'
 import Reset from './Components/Auth/Reset'
 import Dash from './Components/DashBoard/Dash'
-import Login from './Components/Login/Login';
 import Navbar from './Components/Navbar/Navbar'
-import Reset from './Components/Reset/Reset';
-import Sidebar from './Components/Sidebar/Sidebar'
-import {  Routes, Route } from "react-router-dom";
+import Sidebar from "./Components/Sidebar/Sidebar"
 
 function App() {
   
@@ -15,11 +12,10 @@ function App() {
   return (
 
     <>
-  {/* <Navbar/>
+  <Navbar/>
   <Sidebar/>
-  <Dash/> */}
-
-   <Login/> 
+  <Dash/>
+  <Login/> 
   <Reset/>
 
   </>
