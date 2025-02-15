@@ -1,15 +1,13 @@
 import React from 'react'
-import { faHome, faPause, faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPause, faStar } from '@fortawesome/free-solid-svg-icons'
 
 function Dash() {
   return (
     <div>
      <div className='h-screen bg-gray-100 flex '>
 
-    <div className='lg:mx-76  h-screen  '>
+    <div className='lg:mx-76  h-screen '>
 
         
             <h2 className='text-3xl font-bold mt-6'>Ecommerce Dashboard</h2>

@@ -6,6 +6,7 @@ export const Sidebar=()=>{
     const sideItem1 = [
         {title:"Home",path:"/home",icon:<FontAwesomeIcon icon={faPieChart} />},
         {title:"Ecommerce",path:"/ecommerce",icon:<FontAwesomeIcon icon={faCartShopping} />},
+        {title:"Login",path:"/Login",icon:<FontAwesomeIcon icon={faCartShopping} />},
         {title:"CRM",path:"/crm",icon:<FontAwesomeIcon icon={faPhone} />},
         {title:"Project Management",path:"/project_management",icon:<FontAwesomeIcon icon={faFile} />},
         {title:"Travel Agency",path:"/travel_agency",icon:<FontAwesomeIcon icon={faSuitcase} />},
@@ -29,7 +30,7 @@ export const Sidebar=()=>{
       {title: "Errors", path: "/errors", icon:<FontAwesomeIcon icon={faPieChart} />},
       {title: "Authentication", path: "/authentication", icon:<FontAwesomeIcon icon={faPieChart} />},
       {title: "Layouts", path: "/layouts", icon:<FontAwesomeIcon icon={faPieChart} />},
-    ]
+    ];
 
     const sideItem3=[
       {title: "Forms", path: "/forms", icon:<FontAwesomeIcon icon={faPieChart} />},
@@ -45,20 +46,20 @@ export const Sidebar=()=>{
     <div>
    <div id='Sidebar'>
     {sideItem1.map((item,index)=>(
-      <div id="sideItem">
+      <div id="sideItem" key={index}>
       <li><span id="icon">{item.icon}</span>{item.title}</li>
       </div>
     ))}
     <span id='spanSidebar'>Pages</span>
     {sideItem2.map((item,index)=>(
-      <div id="sideItem">
+      <div id="sideItem" key={index}>
       <li><span id="icon">{item.icon}</span>{item.title}</li>
       </div>
     ))}
 
     <span id='spanSidebar'>Pages</span>
     {sideItem3.map((item,index)=>(
-      <div id="sideItem">
+      <div id="sideItem" key={index}>
       <li><span id="icon">{item.icon}</span>{item.title}</li>
       </div>
     ))}
