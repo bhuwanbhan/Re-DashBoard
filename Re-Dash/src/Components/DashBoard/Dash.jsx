@@ -7,7 +7,7 @@ function Dash() {
     <div>
      <div className='h-screen bg-gray-100 flex '>
 
-    <div className='lg:mx-76  h-screen  '>
+    <div className='lg:mx-76  h-screen '>
 
         
             <h2 className='text-3xl font-bold mt-6'>Ecommerce Dashboard</h2>
