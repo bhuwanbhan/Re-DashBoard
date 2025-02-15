@@ -1,0 +1,17 @@
+#container {
+    display: flex;
+    justify-content: end;
+}
+#inner-container{
+    width:900px;
+    display: flex;
+    overflow:inherit;
+    /* justify-content: end; */
+}
+
+#yoo1, #yoo2, #yoo3, #yoo4 {
+    width: 400px;
+    height: 200px;
+    background-color: antiquewhite;
+    margin: 10px;
+}
