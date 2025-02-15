@@ -29,7 +29,7 @@ export const Sidebar=()=>{
       {title: "Errors", path: "/errors", icon:<FontAwesomeIcon icon={faPieChart} />},
       {title: "Authentication", path: "/authentication", icon:<FontAwesomeIcon icon={faPieChart} />},
       {title: "Layouts", path: "/layouts", icon:<FontAwesomeIcon icon={faPieChart} />},
-    ]
+    ];
 
     const sideItem3=[
       {title: "Forms", path: "/forms", icon:<FontAwesomeIcon icon={faPieChart} />},
