@@ -4,7 +4,6 @@ import Login from './Components/Auth/Login'
 import Reset from './Components/Auth/Reset'
 import { Crm } from './Components/Crm/Crm'
 import Dash from './Components/DashBoard/Dash'
-import Home from './Components/Home/Home'
 import Navbar from './Components/Navbar/Navbar'
 import Sidebar from "./Components/Sidebar/Sidebar"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -20,9 +19,9 @@ function App() {
      <BrowserRouter>
       <Routes>
         <Route path="/" element={<Dash/>}>
-          <Route index element={<Login/>} />
-          <Route path="blogs" element={<Reset />} />
-          <Route path="contact" element={<Crm />} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/reset" element={<Reset />} />
+     
          
         </Route>
       </Routes>
@@ -35,4 +34,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
