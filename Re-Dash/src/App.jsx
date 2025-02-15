@@ -6,33 +6,27 @@ import { Crm } from './Components/Crm/Crm'
 import Dash from './Components/DashBoard/Dash'
 import Home from './Components/Home/Home'
 import Navbar from './Components/Navbar/Navbar'
-//import Sidebar from "./Components/Sidebar/Sidebar"
-import { BrowserRouter, Routes, Route, useNavigate,Link } from "react-router-dom";
-import Sidebar from './Components/Sidebar/Sidebar'
+import Sidebar from "./Components/Sidebar/Sidebar"
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
  
 
   return(
     <>
+
     <Navbar/>
     <Sidebar/>
- 
-    <BrowserRouter>
-     
-        
-
-         <Routes>
- 
-          <Route path="/dash" element={<Dash/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/Reset" element={<Reset/>}/>
-          <Route path="/crm" element={<Crm/>}/>
-          
-          
-          
-        </Routes>
-      </BrowserRouter>
+     <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dash/>}>
+          <Route index element={<Login/>} />
+          <Route path="blogs" element={<Reset />} />
+          <Route path="contact" element={<Crm />} />
+         
+        </Route>
+      </Routes>
+    </BrowserRouter>
 
   </> 
     
