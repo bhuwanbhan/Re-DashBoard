@@ -14,16 +14,14 @@ function App() {
   return(
     <>
 
-    <Navbar/>
-    <Sidebar/>
-     <BrowserRouter>
+<Navbar />
+    <Sidebar />
+
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Dash/>}>
-          <Route path="/login" element={<Login/>} />
-          <Route path="/reset" element={<Reset />} />
-     
-         
-        </Route>
+        <Route path="/" element={<Dash />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/reset" element={<Reset />} />
       </Routes>
     </BrowserRouter>
 
