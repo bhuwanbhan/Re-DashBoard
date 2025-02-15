@@ -17,13 +17,13 @@ function App() {
 
     <Navbar/>
     <Sidebar/>
+    {/* <Login/> */}
      <BrowserRouter>
       <Routes>
         <Route path="/" element={<Dash/>}>
-          <Route index element={<Login/>} />
-          <Route path="blogs" element={<Reset />} />
-          <Route path="contact" element={<Crm />} />
-         
+          <Route path="/Login" element={<Login/>} />
+          <Route path="/blogs" element={<Reset />} />
+          <Route path="/contact" element={<Crm />} />
         </Route>
       </Routes>
     </BrowserRouter>
