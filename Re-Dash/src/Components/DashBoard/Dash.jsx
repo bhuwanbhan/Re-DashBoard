@@ -1,4 +1,5 @@
 import React from 'react'
+import './Dash.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPause, faStar } from '@fortawesome/free-solid-svg-icons'
 
@@ -21,7 +22,51 @@ function Dash() {
             <span className='text-xs ms-9  '> Out of stock</span> </p>
             </div>
             </div>
+                  
+              
             </div>
+            <div className='ms:ms-0  md:ms-80 md:h-screen lg:ms-80 bg-white' >
+            <div className='grid   sm:grid-cols-2  md:grid-cols-2 lg:grid-cols-2  gap-x-4  gap-y-4  '>
+                  <div className='bg-gray-200  rounded-lg shadow-xl min-h-[300px]  '>
+                    <div className=' sm:mt-4 sm:ms-4 flex'>
+                    <p>Total orders</p>
+                    <span>-6.8%</span>
+                    
+                    <div className=' justify-end '>
+                      <p>16,247</p>
+                    </div>
+                    </div>
+                  </div>
+                  <div className='bg-gray-200  rounded-lg shadow-xl min-h-[300px]'>
+                    <div className=' sm:mt-4 sm:ms-4 '>
+                    <p>New customers+26.5%</p>
+                    <p>Last 7 days</p>
+                    </div>
+                  </div>
+                  <div className='bg-gray-200  rounded-lg shadow-xl min-h-[300px] '>
+                    <div className='sm:mt-4 sm:ms-4 '>
+                    <p>Top coupons</p>
+                    <p>Last 7 days</p>
+                    </div>
+                  </div>
+                  <div className='bg-gray-200  rounded-lg shadow-xl min-h-[300px]'>
+                    <div className='sm:mt-4 sm:ms-4 '>
+                    <p>Paying vs non paying</p>
+                    <p>Last 7 days</p>
+                  </div>
+                  </div>
+
+                </div>
+                <p className='border-y-1 text-gray-400 min-h-[300px] mt-10'>
+                <p className=' ms-5  mt-10  font-bold text-2xl text-black'>Latest reviews</p>
+                <p className='ms-5'>Payment received across all channels</p>
+                </p>
+                
+                <div>
+                  
+                </div>
+                </div>
+
 </div>
 )
 }
