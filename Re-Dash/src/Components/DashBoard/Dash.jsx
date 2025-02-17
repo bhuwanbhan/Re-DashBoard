@@ -1,11 +1,14 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPause, faStar } from '@fortawesome/free-solid-svg-icons'
+import {Crm} from "../Crm/Crm"
+import Table from "../Table/Table"
+import "./Dash.css"
 
 function Dash() {
   return (
     <div>
-     <div className='h-screen bg-gray-100 flex '>
+     <div className='h-screen bg-gray-100 flex ' id='container'>
 
     <div className='lg:mx-76  h-screen '>
 
@@ -21,6 +24,8 @@ function Dash() {
             <span className='text-xs ms-9  '> Out of stock</span> </p>
             </div>
             </div>
+            <Crm/>
+            <Table/>
             </div>
 </div>
 )

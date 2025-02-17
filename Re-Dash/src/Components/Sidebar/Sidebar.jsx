@@ -1,12 +1,34 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBarChart, faBars, faBook, faBookmark, faCartShopping, faFile, faFileAlt, faLink, faMailBulk, faMailReply, faMessage, faNetworkWired, faPhone, faPhotoFilm, faPieChart, faSuitcase } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 import "./Sidebar.css";
 
 export const Sidebar=()=>{
+  const [opened, setOpened] = useState(null);
+
+  const toggle = (index) => {
+    if(opened===index){
+      return setOpened(null);
+    }
+    setOpened(index);
+  }
+
+
     const sideItem1 = [
-        {title:"Home",path:"/home",icon:<FontAwesomeIcon icon={faPieChart} />},
-        {title:"Ecommerce",path:"/ecommerce",icon:<FontAwesomeIcon icon={faCartShopping} />},
-        {title:"Login",path:"/Login",icon:<FontAwesomeIcon icon={faCartShopping} />},
+        {title:"Home",icon:<FontAwesomeIcon icon={faPieChart} />, 
+        drop:[
+          {title:"Ecommerce",path:"/ecommerce"},
+          {title:"CRM",path:"/crm"},
+          {title:"Project Management",path:"/project_management"},
+          {title:"Social",path:"/social"},
+          {title:"Travel Agency",path:"/travel_agency"},
+        ]},
+        {title:"Ecommerce",icon:<FontAwesomeIcon icon={faCartShopping} />,
+      drop:[
+        {title:"Admin"},
+        {title:"SuperAdmin"},
+      ]
+      },
         {title:"CRM",path:"/crm",icon:<FontAwesomeIcon icon={faPhone} />},
         {title:"Project Management",path:"/project_management",icon:<FontAwesomeIcon icon={faFile} />},
         {title:"Travel Agency",path:"/travel_agency",icon:<FontAwesomeIcon icon={faSuitcase} />},
@@ -28,7 +50,12 @@ export const Sidebar=()=>{
       {title: "Members", path: "/members", icon:<FontAwesomeIcon icon={faPieChart} />},
       {title: "Timeline", path: "/timeline", icon:<FontAwesomeIcon icon={faPieChart} />},
       {title: "Errors", path: "/errors", icon:<FontAwesomeIcon icon={faPieChart} />},
-      {title: "Authentication", path: "/authentication", icon:<FontAwesomeIcon icon={faPieChart} />},
+      {title: "Authentication", icon:<FontAwesomeIcon icon={faPieChart} />,
+      drop:[
+        {title:"Login", path:"/login"},
+        {title:"Signup", path:"/signup"},
+      ]
+    },
       {title: "Layouts", path: "/layouts", icon:<FontAwesomeIcon icon={faPieChart} />},
     ];
 
@@ -44,25 +71,60 @@ export const Sidebar=()=>{
     ]
   return (
     <div>
-   <div id='Sidebar'>
-    {sideItem1.map((item,index)=>(
-      <div id="sideItem" key={index}>
-      <li><span id="icon">{item.icon}</span>{item.title}</li>
+  <div id='Sidebar'>
+  <ul>
+  {sideItem1.map((item, index) => (
+  <div key={index} className="sideItem">
+    <div className="sidebar-item" onClick={() => item.drop && toggle(index)}>
+      <span className="icon">{item.icon}</span> {item.title} <span id='dropIcon'>{opened === index ? "⌄": '>'}</span>
+    </div>
+    {item.drop && opened === index && ( // ✅ Moved inside <li>
+      <div className="dropdown">
+        {item.drop.map((dropItem, dropIndex) => (
+          <li key={dropIndex}>{dropItem.title}</li>
+        ))}
       </div>
-    ))}
-    <span id='spanSidebar'>Pages</span>
-    {sideItem2.map((item,index)=>(
-      <div id="sideItem" key={index}>
-      <li><span id="icon">{item.icon}</span>{item.title}</li>
-      </div>
-    ))}
+    )}
+    </div>
+))}
+      </ul>
 
+  <ul>
     <span id='spanSidebar'>Pages</span>
-    {sideItem3.map((item,index)=>(
-      <div id="sideItem" key={index}>
-      <li><span id="icon">{item.icon}</span>{item.title}</li>
+  {sideItem2.map((item, index) => (
+  <div key={index} className="sideItem">
+    <div className="sidebar-item" onClick={() => item.drop && toggle(index)}>
+      <span className="icon">{item.icon}</span> {item.title} <span id='dropIcon'>{opened === index ? "⌄": '>'}</span>
+    </div>
+    {item.drop && opened === index && ( // ✅ Moved inside <li>
+      <div className="dropdown">
+        {item.drop.map((dropItem, dropIndex) => (
+          <li key={dropIndex}>{dropItem.title}</li>
+        ))}
       </div>
-    ))}
+    )}
+    </div>
+))}
+      </ul>
+      <span id='spanSidebar'>Modules</span>
+  <ul>
+  {sideItem3.map((item, index) => (
+  <div key={index} className="sideItem">
+    <div className="sidebar-item" onClick={() => item.drop && toggle(index)}>
+      <span className="icon">{item.icon}</span> {item.title} <span id='dropIcon'>{opened === index ? "⌄": '>'}</span>
+    </div>
+    {item.drop && opened === index && ( // ✅ Moved inside <li>
+      <div className="dropdown">
+        {item.drop.map((dropItem, dropIndex) => (
+          <li key={dropIndex}>{dropItem.title}</li>
+        ))}
+      </div>
+    )}
+    </div>
+))}
+      </ul>
+
+
    </div>
     </div>
   )
