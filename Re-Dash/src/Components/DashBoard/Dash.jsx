@@ -4,10 +4,14 @@ import { faPause, faStar } from '@fortawesome/free-solid-svg-icons'
 import {Crm} from "../Crm/Crm"
 import Table from "../Table/Table"
 import "./Dash.css"
+import Navbar from '../Navbar/Navbar'
+import Sidebar from "../Sidebar/Sidebar"
 
 function Dash() {
   return (
     <div>
+      <Navbar/>
+      <Sidebar/>
      <div className='h-screen bg-gray-100 flex ' id='container'>
 
     <div className='lg:mx-76  h-screen '>

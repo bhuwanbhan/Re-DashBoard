@@ -9,7 +9,6 @@
 }
 
 #Sidebar .sideItem{
-    padding: 10px 30px;
     font-size: 14px;
     transition: all 100ms ease-in;
     cursor: pointer;
@@ -21,14 +20,8 @@
     border-radius: 15px;
 }
 
-#dropIcon {
-    align-items: end;
-    transition: all 300ms ease-in-out;
-}
 
-
-
-#icon{
+.icon{
     margin-right:10px;
 }
 
@@ -50,9 +43,17 @@ ul{
 .dropdown li{
     padding: 10px 30px;
     background-color: aliceblue;
+    transition: all 300ms ease-in-out;
 }
 
 .sidebar-item{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.sidebar-item:hover{
+    background-color:rgb(165, 165, 165);
+    transition: all 300ms ease-in;
 }
