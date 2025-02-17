@@ -32,7 +32,7 @@ return (
                             <label for="remember" className="text-gray-500 dark:text-gray-300">Remember me</label>
                           </div>
                       </div>
-                      <a  className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
+                      <a  className="text-sm font-medium text-primary-600 hover:underline text-white cursor-pointer">Forgot password?</a>
                   </div>
                   <button type="submit" className="w-full text-white bg-blue-500
                    hover:bg-blue-700 focus:ring-4 focus:outline-blue-700 focus:ring-primary-300

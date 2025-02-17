@@ -78,7 +78,7 @@ export const Sidebar=()=>{
     <div className="sidebar-item" onClick={() => item.drop && toggle(index)}>
       <span className="icon">{item.icon}</span> {item.title} <span id='dropIcon'>{opened === index ? "⌄": '>'}</span>
     </div>
-    {item.drop && opened === index && ( // ✅ Moved inside <li>
+    {item.drop && opened === index && (
       <div className="dropdown">
         {item.drop.map((dropItem, dropIndex) => (
           <li key={dropIndex}>{dropItem.title}</li>
@@ -96,7 +96,7 @@ export const Sidebar=()=>{
     <div className="sidebar-item" onClick={() => item.drop && toggle(index)}>
       <span className="icon">{item.icon}</span> {item.title} <span id='dropIcon'>{opened === index ? "⌄": '>'}</span>
     </div>
-    {item.drop && opened === index && ( // ✅ Moved inside <li>
+    {item.drop && opened === index && (
       <div className="dropdown">
         {item.drop.map((dropItem, dropIndex) => (
           <li key={dropIndex}>{dropItem.title}</li>
@@ -111,9 +111,12 @@ export const Sidebar=()=>{
   {sideItem3.map((item, index) => (
   <div key={index} className="sideItem">
     <div className="sidebar-item" onClick={() => item.drop && toggle(index)}>
-      <span className="icon">{item.icon}</span> {item.title} <span id='dropIcon'>{opened === index ? "⌄": '>'}</span>
+      <div>
+      <span className="icon">{item.icon}{item.title}</span>
+      </div>
+      <span id='dropIcon'>{opened === index ? "⌄": '>'}</span>
     </div>
-    {item.drop && opened === index && ( // ✅ Moved inside <li>
+    {item.drop && opened === index && (
       <div className="dropdown">
         {item.drop.map((dropItem, dropIndex) => (
           <li key={dropIndex}>{dropItem.title}</li>

@@ -24,8 +24,12 @@ function Dash() {
             <span className='text-xs ms-9  '> Out of stock</span> </p>
             </div>
             </div>
+            <div>
             <Crm/>
+            </div>
+            <div>
             <Table/>
+            </div>
             </div>
 </div>
 )
