@@ -3,7 +3,7 @@
     justify-content: end;
 } */
 #inner-container, #inner-container2{
-    margin-left: 270px;
+    margin-left: 300px;
     display: flex;
     margin-right: 20px;
 }

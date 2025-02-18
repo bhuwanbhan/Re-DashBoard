@@ -5,11 +5,15 @@ import { faPause, faStar } from '@fortawesome/free-solid-svg-icons'
 import {Crm} from "../Crm/Crm"
 import Table from "../Table/Table"
 import "./Dash.css"
+import Navbar from '../Navbar/Navbar'
+import Sidebar from "../Sidebar/Sidebar"
 
 function Dash() {
   return (
     <div>
-     <div className='h-screen bg-white flex ' id='container'>
+      <Navbar/>
+      <Sidebar/>
+     <div className='h-screen bg-gray-100 flex ' id='container'>
 
     <div className='lg:mx-76  h-screen'>
 
@@ -24,19 +28,12 @@ function Dash() {
             <span className='text-xs ms-9'> Out of stock</span> </p>
             </div>
             </div>
+            <div>
             <Crm/>
-
-            <div className='mt-65'>
-              <p>bhuban</p>
+            <Table/>
             </div>
-        
-            </div> 
-            <div className='sm:mt-65 lg:mt-65  '>
-            <Table  />
-            </div>
-            </div> 
-
-
+</div>
+</div>
 )
 }
 

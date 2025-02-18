@@ -12,7 +12,7 @@ function Navbar() {
     
 
 
-  <nav className=" border-y-1 bg-gray-200   w-full top-0 sticky   ">
+  <nav className=" border-y-1 bg-gray-200   w-full top-0 sticky ">
   <div className=" flex items-center justify-between  h-15 ">
     <a className=" items-center space-x-3 ms-8  text-3xl font-bold  text-gray-600">phoenix</a>
 
@@ -35,12 +35,12 @@ function Navbar() {
            onClick={()=> setOpen(!open)} src= {pro} className='h-7  sm:p-1 rounded-4xl sm:w-auto' />
 
         {open  && (
-          <div className='bg-white p-4 w-40  shadow-lg absolute  right-1  top-15 '>
+          <div className='   bg-white p-5 w-60   rounded-2xl shadow-lg absolute  right-1  top-15 '>
 
             <ul>
               {
                   Menus.map((menu)=>(
-                    <li className='p-2 text-lg cursor-pointer rounded hover:bg-gray-500' key={menu}>{menu}</li>
+                    <li className='p-2 text-lg cursor-pointer rounded hover:bg-gray-500 -mt-0.5 mr-1.1 border-t-2px solid ' key={menu}>{menu}</li>
                   ))}
             </ul>
 
