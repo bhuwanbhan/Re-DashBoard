@@ -81,7 +81,10 @@ export const Sidebar=()=>{
   <div key={index} className="sideItem">
     <div className="sidebar-item" onClick={() => item.drop && toggle(index)}>
       <div>
-      <span className="icon">{item.icon}</span> {item.title}</div> <div className='dropIcon'>{opened === index ? "⌄": '>'}</div>
+      <span className="icon">{item.icon}</span> {item.title}</div> 
+      {/* <div className='dropIcon'>{opened === index ? "v": '>'}
+
+      </div> */}
     </div>
     {item.drop && opened === index && (
       <div className="dropdown">
@@ -101,7 +104,8 @@ export const Sidebar=()=>{
   <div key={index} className="sideItem">
     <div className="sidebar-item" onClick={() => item.drop && toggle(index)}>
       <div>
-      <span className="icon">{item.icon}</span> {item.title}</div> <div id='dropIcon'>{opened === index ? "⌄": '>'}</div>
+      <span className="icon">{item.icon}</span> {item.title}</div>
+       {/* <div id='dropIcon'>{opened === index ? "⌄": '>'}</div> */}
     </div>
     {item.drop && opened === index && (
       <div className="dropdown">
@@ -120,7 +124,8 @@ export const Sidebar=()=>{
   <div key={index} className="sideItem">
     <div className="sidebar-item" onClick={() => item.drop && toggle(index)}>
       <div>
-      <span className="icon">{item.icon}</span> {item.title}</div> <div id='dropIcon'>{opened === index ? "⌄": '>'}</div>
+      <span className="icon">{item.icon}</span> {item.title}</div>
+       {/* <div id='dropIcon'>{opened === index ? "⌄": '>'}</div> */}
     </div>
     {item.drop && opened === index && (
       <div className="dropdown">

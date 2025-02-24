@@ -13,11 +13,15 @@ function Dash() {
     <div>
       <Navbar/>
       <Sidebar/>
+<<<<<<< HEAD
      <div className='h-screen bg-gray-100 flex ' id='container'>
+=======
+        <div className='h-screen bg-gray-100 flex ' id='container'>
+>>>>>>> e3408c6723d039303273fcef5a33c16701a9226e
 
-    <div className='lg:mx-76  h-screen'>
+         <div className='lg:mx-76  h-screen'>
 
-           <h2 className='text-3xl font-bold mt-6'>Ecommerce Dashboard</h2>
+           <h2 className='text-3xl font-bold mt-25'>Ecommerce Dashboard</h2>
             <p className='text-gray-600'>Here’s what’s going on at your business right now</p>
             <div className='sm:flex gap-4'>
             <p className='mt-7 space-x-3'><FontAwesomeIcon icon={faStar}/> <span className='font-bold text-xl '>57 new orders</span> <br />
@@ -30,12 +34,18 @@ function Dash() {
             </div>
             <div>
             <Crm/>
+<<<<<<< HEAD
             </div>
             <div>
+=======
+>>>>>>> e3408c6723d039303273fcef5a33c16701a9226e
             <Table/>
             </div>
-            </div>
 </div>
+<<<<<<< HEAD
+=======
+</div>
+>>>>>>> e3408c6723d039303273fcef5a33c16701a9226e
 )
 }
 
