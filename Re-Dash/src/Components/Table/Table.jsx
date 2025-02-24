@@ -2,7 +2,7 @@ import "./Table.css"
 
 export const Table = () => {
     return(<>
-    <div id="table">
+    <div id="table"  >
     <table>
   <thead>
     <tr>
