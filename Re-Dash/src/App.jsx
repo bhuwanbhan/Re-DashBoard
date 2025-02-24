@@ -9,22 +9,28 @@ import { Table } from './Components/Table/Table'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Login from './Components/Auth/Login'
-import Forget from './Components/Auth/Forget'
+
 import Navbar from './Components/Navbar/Navbar'
 import Sidebar from './Components/Sidebar/Sidebar'
 import OTP from './Components/Auth/OTP'
+import SignUp from './Components/Auth/Reset'
+
+import Forget from './Components/Auth/Forget'
 
 
 function App() {
   return (
     <>
+     
+       
+
      <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
-            <Route path="/reset" element={<Reset />} />
-            <Route path="/OTP" element={<OTP/>} />
-            <Route path="/Forget" element={<Forget/>} />
-          <Route path="/" element={<Dash />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/forget" element={<Forget/>} />
+             <Route path="/" element={<Dash />} />
+             <Route path="/otp" element={<OTP/>} />
             <Route path="/table" element={<Table />} />
             <Route path="/contact" element={<Crm />} />
           

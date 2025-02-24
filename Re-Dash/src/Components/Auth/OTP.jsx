@@ -3,10 +3,10 @@ import otp from '../Auth/otp.jpg';
 
 function OTP() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-300 p-4">
+    <div className="flex items-center justify-center min-h-screen bg-gray-300 p-4 shadow-2xl">
       <div className="relative flex flex-col md:flex-row bg-purple-500 shadow-2xl rounded-2xl w-full max-w-4xl overflow-hidden">
         
-        {/* Left Section */}
+       
         <div className="flex flex-col items-center justify-center p-6 md:p-12 w-full md:w-1/2">
           <h2 className="mb-3 text-3xl md:text-4xl font-bold text-white">Login</h2>
           <p className="text-gray-200 text-center mb-4">VERIFICATION CODE</p>
@@ -14,7 +14,7 @@ function OTP() {
             Your super admin verification code is on its way! <br /> Check your email and get started.
           </p>
           
-          {/* OTP Inputs */}
+         
           <div className="flex items-center justify-center gap-2 md:gap-3 mb-4">
             {[...Array(6)].map((_, index) => (
               <input
@@ -30,7 +30,7 @@ function OTP() {
             Didn’t receive the OTP? <span className="text-blue-300 cursor-pointer hover:underline">Resend</span>
           </p>
           
-          <button className="  rounded  w-full md:w-auto px-6 py-2 md:py-3 font-medium text-white bg-blue-600 hover:bg-blue-700 transition duration-300">
+          <button className="  rounded-xl  w-full md:w-auto px-40 py-2 md:py-3 font-medium text-white bg-blue-600 transition duration-300">
             Login
           </button>
         </div>

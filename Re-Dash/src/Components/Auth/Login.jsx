@@ -1,107 +1,105 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye } from "@fortawesome/free-solid-svg-icons";
-
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import com from "../Auth/com.jpg";
 
 function Login() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    navigate("/");
+  };
 
   return (
-    <div>
-      <section className="bg-gray-500 dark:bg-gray-900">
-        <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <a className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-    
-          </a>
-          <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-                <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 className="  px-35 text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                Sign In
-              </h1>
-              <form className="space-y-4 md:space-y-6">
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Your email
-                  </label>
-                   <input
-                    type="email"
-                    id="email"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="name@company.com"
-                    required/>  </div>
-                <div>
-                  <label
-                    htmlFor="password"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                  >
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    id="password"
-                    placeholder="•••••••"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    required
-                  />
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-start">
-                    <div className="flex items-center h-5">
-                      <input
-                        id="remember"
-                        type="checkbox"
-                        className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-500 dark:ring-offset-gray-800"
-                        required
-                      />
-                    </div>
-                    <div className="ml-3 text-sm">
-                      <label
-                        htmlFor="remember"
-                        className="text-gray-500 dark:text-gray-300"
-                      >
-                        Remember me
-                      </label>
-                    </div>
-                  </div>
-                  <Link
-                    to="/Forget"
-                    className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500 cursor-pointer"
-                  >
-                    Forgot password?
-                  </Link>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-blue-700 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                  onClick={() => navigate("/")}
-                >
-                  Login
-                </button>
-                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Don’t have an account yet?
-                  <Link
-                    to="/reset"
-                    className="font-medium text-primary-600 hover:underline dark:text-primary-500">
-                    
-                  </Link>
-                </p>
-                <div>
-                  <Link
-                    to="/Reset"
-                    className="sm:px-30 text-sm font-medium text-primary-600 hover:underline dark:text-primary-500 cursor-pointer text-blue-700">
-                    Create an account
-                  </Link>
-                </div>
-              </form>
+    <section className="h-screen flex items-center justify-center ">
+      <div className="container px-6 py-12 w-300 max-w-4xl shadow-2xl  flex flex-wrap rounded-lg bg-gray-400 ">
+        <div className="hidden lg:block w-1/2">
+          <img src={com} className="h-full" />
+        </div>
+
+        <div className="lg:w-1/2 px-6 bg-white">
+          <h2 className="text-2xl font-semibold text-center mb-6">Login</h2>
+
+          <div className="relative mb-4">
+            <div class="relative">
+              <input
+                type="text"
+                id="floating_outlin"
+                class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border- peer"
+                placeholder=" "
+              />
+              <label
+                className="absolute text-sm text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white 
+         px-2 peer-focus:px-2  
+          peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">
+                Email
+              </label>
             </div>
           </div>
+
+          <div className="relative">
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border- peer"
+                placeholder=" "
+              />
+              <label
+                className="absolute text-sm text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white 
+                        px-2 peer-focus:px-2  
+                         peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">
+                Password
+              </label>
+
+              <button
+                type="button"
+                className="absolute right-3 top-3"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
+              </button>
+            </div>
+          </div>
+
+          <div className="flex justify-between items-center mb-4  mt-4">
+            <label className="flex items-center">
+              <input
+                type="checkbox"
+                className="mr-2 "
+                checked={isChecked}
+                onChange={() => setIsChecked(!isChecked)}
+              />
+              Remember me
+            </label>
+            <Link to="/forget" className="text-blue-500 hover:underline">
+              Forgot password?
+            </Link>
+          </div>
+          <button
+            onClick={handleSubmit}
+            type="submit"
+            className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition  cursor-pointer "
+          >
+            Sign in
+          </button>
+          <p className="text-center mt-4">
+            Don’t have an account?{" "}
+            <Link to="/signup" className="text-blue-500">
+              Sign up
+            </Link>
+          </p>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 
