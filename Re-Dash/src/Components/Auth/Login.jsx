@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import com from "../Auth/com.jpg";
+import login from "../Auth/login.jpg";
 
 function Login() {
   const navigate = useNavigate();
@@ -17,26 +17,27 @@ function Login() {
   };
 
   return (
-    <section className="h-screen flex items-center justify-center ">
-      <div className="container px-6 py-12 w-300 max-w-4xl shadow-2xl  flex flex-wrap rounded-lg bg-gray-400 ">
-        <div className="hidden lg:block w-1/2">
-          <img src={com} className="h-full" />
+    <section className="h-screen flex items-center justify-center">
+      <div className=" h-130  container px-6 py-2 w-full max-w-4xl bg-white rounded-lg flex flex-wrap">
+        <div className="hidden lg:block w-1/2 ">
+          <img src={login} className="  w-full h-full  bg-white  shadow-blue-500" />
         </div>
 
-        <div className="lg:w-1/2 px-6 bg-white">
-          <h2 className="text-2xl font-semibold text-center mb-6">Login</h2>
+        <div className="lg:w-1/2 px-6 bg-white  ">
+          <h2 className="text-2xl font-semibold text-center mb-6   mt-5 ">Login</h2>
 
           <div className="relative mb-4">
             <div class="relative">
               <input
                 type="text"
                 id="floating_outlin"
-                class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border- peer"
+                class="block mt-15
+                 px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border- peer"
                 placeholder=" "
               />
               <label
-                className="absolute text-sm text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white 
-         px-2 peer-focus:px-2  
+                className="absolute text-sm text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white
+         px-2 peer-focus:px-2 
           peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">
                 Email
               </label>
@@ -50,11 +51,11 @@ function Login() {
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border- peer"
+                class="block mt-7 px-2.5 pb-2.5 pt-4 w-full text-sm  bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border- peer"
                 placeholder=" "
               />
               <label
-                className="absolute text-sm text-gray-500  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white 
+                className="absolute text-sm  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white 
                         px-2 peer-focus:px-2  
                          peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">
                 Password

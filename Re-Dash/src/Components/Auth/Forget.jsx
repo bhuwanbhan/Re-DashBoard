@@ -15,15 +15,15 @@ function Login() {
   };
 
   return (
-    <section className="h-screen flex items-center justify-center w-full ">
-      <div className="container h-full  px-6 py-12 w-full max-w-4xl bg-white shadow-2xl  rounded-lg flex flex-wrap">
+    <section className=" h-screen  flex items-center justify-center w-full ">
+      <div className="  h-130  container px-6 py-12 w-full max-w-4xl bg-white rounded-lg flex flex-wrap">
      
-        <div className="hidden lg:block w-1/2 rounded-2xl bg-white h-full ">
-          <img src={forget} className=" mt-3 rounded-2xl w-full h-full shadow-2xl  " />
+        <div className="hidden lg:block w-1/2 rounded-2xl bg-white  ">
+          <img src={forget} className=" rounded-2xl w-full   " />
         </div>
 
        
-        <div className="w-full h-full lg:w-1/2 px-6 py-30 ">
+        <div className="w-full h-full lg:w-1/2 px-6 py-0 ">
           <h2 className="text-2xl font-semibold text-center  mb-6">Forget your password?</h2>
           <p className="text-sm md:text-base ">
             Enter your email address to reset your password.
