@@ -13,7 +13,7 @@ function Navbar() {
   <div className=" flex items-center justify-between  h-15 ">
     <a className=" items-center space-x-3 ms-8  text-3xl font-bold   text-gray-600">phoenix</a>
 
-        <input type="text" placeholder='   Search'  className='border-1 h-8 rounded-2xl w-95 hidden sm:block ' />
+        <input type="text" placeholder='  Search'  className='border-1 h-8 rounded-2xl w-95 hidden sm:block ' />
     
 
       <ul className="font-medium flex sm:h-8 md:p-1 m-0 md:p-0;rounded-lg   ">
