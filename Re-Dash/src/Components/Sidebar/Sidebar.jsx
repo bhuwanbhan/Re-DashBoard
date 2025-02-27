@@ -302,6 +302,7 @@ export const Sidebar = () => {
               )}
             </div>
           ))}
+          
         </ul>
       </div>
     </div>
