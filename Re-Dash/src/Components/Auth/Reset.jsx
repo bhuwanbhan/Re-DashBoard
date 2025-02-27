@@ -18,26 +18,27 @@ function Reset() {
 
   return (
     <section className="h-screen flex items-center justify-center ">
-      <div className="container px-6 py-2 w-full max-w-4xl bg-white shadow-2xl rounded-lg flex flex-wrap">
-        {/* Left Side Image */}
+      <div className=" h-130  container px-6 py-2 w-full max-w-4xl  flex flex-wrap">
+       
         <div className="hidden lg:block w-1/2 rounded-2xl  ">
-          <img src={man} className=" mt-20 ms-5 rounded-2xl w-80 h-80  shadow-2xl " />
+          <img src={man} className="  rounded-2xl w-full h-auto mt-15" />
         </div>
 
-        {/* Right Side Form */}
-        <div className="w-full lg:w-1/2 px-6   ">
-          <h2 className="text-2xl font-semibold text-center mb-6">Sign Up</h2>
+       
+        <div className="w-full lg:w-1/2 px-6 py-10   ">
+          <h2 className="text-2xl font-semibold text-center mb-6   ">Sign Up</h2>
 
           <form onSubmit={handleSubmit}>
          
             <div className="relative mb-4">
               <label htmlFor="email" className="text-gray-600">
-               Full Name
+             
               </label>
               <input
-                type="email"
+                type="text"
                 id="email"
-                className="w-full p-2 border border-gray-300 rounded mt-1"
+                placeholder="Enter your email"
+                className="w-full   p-2 border border-gray-300 rounded mt-1"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -47,12 +48,13 @@ function Reset() {
          
             <div className="relative mb-4">
               <label htmlFor="password" className="text-gray-600">
-                Email
+              
               </label>
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
                   id="password"
+                  placeholder="create your password"
                   className="w-full p-2 border border-gray-300 rounded mt-1 pr-10"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -60,43 +62,46 @@ function Reset() {
                 />
                   <div className="relative mb-4">
               <label htmlFor="email" className="text-gray-600">
-               Username
+              
               </label>
               <input
                 type="email"
                 id="email"
-                className="w-full p-2 border border-gray-300 rounded mt-1"
+                placeholder="conform your password"
+                className="w-full p-2 border border-gray-300 rounded mt-5"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
-            <div className="relative mb-4">
+            {/* <div className="relative mb-4">
               <label htmlFor="email" className="text-gray-600">
-                password
+               
               </label>
               <input
                 type="email"
                 id="email"
+                placeholder="Password"
                 className="w-full p-2 border border-gray-300 rounded mt-1"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-            </div>
-            <div className="relative mb-4">
+            </div> */}
+            {/* <div className="relative mb-4">
               <label htmlFor="email" className="text-gray-600">
-                repeat password
+              
               </label>
               <input
                 type="email"
                 id="email"
+                placeholder="Repeat password"
                 className="w-full p-2 border border-gray-300 rounded mt-1"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-            </div>
+            </div> */}
                 <button
                   type="button"
                   className="absolute right-3 top-3"
