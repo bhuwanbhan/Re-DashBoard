@@ -7,12 +7,8 @@ import Dash from './Components/DashBoard/Dash'
 
 import { Table } from './Components/Table/Table'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import ProtectRoute from './Components/Auth/ProtectRoute'
-
 import Login from './Components/Auth/Login'
 
-import Navbar from './Components/Navbar/Navbar'
-import Sidebar from './Components/Sidebar/Sidebar'
 import OTP from './Components/Auth/OTP'
 import SignUp from './Components/Auth/Reset'
 
@@ -27,7 +23,7 @@ function App() {
      <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
+            {/* <Route path="/signup" element={<SignUp />} /> */}
             <Route path="/forget" element={<Forget/>} />
              <Route path="/" element={<Dash />} />
              <Route path="/otp" element={<OTP/>} />

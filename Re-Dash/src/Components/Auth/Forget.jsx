@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+// import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import forget from "../Auth/forget.png";
 
 function Login() {
@@ -49,7 +49,7 @@ function Login() {
                   className="absolute right-3 top-3"
                   onClick={() => setShowPassword(!showPassword)}
                 >
-                  {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
+                  {/* {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />} */}
                 </button>
               </div>
             </div>

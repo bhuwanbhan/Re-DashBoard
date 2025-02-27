@@ -1,14 +1,17 @@
-import { faBars, faBell, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBell} from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import pro from '../Navbar/pro.jpg'  
+import Sidebar from '../Sidebar/Sidebar'
 
 
 function Navbar() {
 
   const[open, setOpen] = useState(false)
+  const[visibal, setVisibal] = useState(true)
   const Menus = ["profile","help centre", "post activity", "setting", "your apps", "Signout"];
   return (
+    <>
     <nav className=" border-y-1 bg-gray-200  w-full top-0 fixed">
   <div className=" flex items-center justify-between  h-15 ">
     <a className=" items-center space-x-3 ms-8  text-3xl font-bold   text-gray-600">phoenix</a>
@@ -25,7 +28,8 @@ function Navbar() {
           </li>
         
         <li>
-          <a className="block py-2 px-3  "> <FontAwesomeIcon icon={faBars} className='text-gray-500' />  </a></li>
+          <a className="block py-2 px-3" onClick={()=> setVisibal(!visibal)}> <FontAwesomeIcon icon={faBars} className='text-gray-500' />
+          </a></li>
         <li>
           <a className="block py-2 px-3 rounded-sm "> <img
           
@@ -48,10 +52,11 @@ function Navbar() {
           </li>
       </ul>
     </div>
-           
-   
-
+    {visibal && (
+    <Sidebar/>)
+    }
    </nav>
+   </>
 
   )
 }
