@@ -19,19 +19,17 @@ function Login() {
       <div className="  h-130  container px-6 py-12 w-full max-w-4xl bg-white rounded-lg flex flex-wrap">
      
         <div className="hidden lg:block w-1/2 rounded-2xl bg-white  ">
-          <img src={forget} className=" rounded-2xl w-full   " />
+          <img src={forget} className=" rounded-2xl w-full" />
         </div>
 
        
         <div className="w-full h-full lg:w-1/2 px-6 py-0 ">
-          <h2 className="text-2xl font-semibold text-center  mb-6">Forget your password?</h2>
+          <h2 className="text-2xl font-semibold text-center mt-10  mb-6">Forget your password?</h2>
           <p className="text-sm md:text-base ">
             Enter your email address to reset your password.
             </p>
 
-          
-           
-            <div className="relative mb-4 mt-10">
+        <div className="relative mb-4 mt-10">
               <label htmlFor="password" className="text-gray-600">
                 Password
               </label>

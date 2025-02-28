@@ -1,7 +1,7 @@
 import { faBars, faBell, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import pro from '../Navbar/pro.jpg'  
+import pro from './pro.jpg'  
 
 
 function Navbar() {
