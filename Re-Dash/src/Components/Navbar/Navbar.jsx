@@ -1,7 +1,7 @@
 import { faBars, faBell} from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import pro from '../Navbar/pro.jpg'  
+import pro from './pro.jpg'  
 import Sidebar from '../Sidebar/Sidebar'
 
 
@@ -30,7 +30,8 @@ function Navbar() {
         
         <li>
           <a className="block py-2 px-3" onClick={()=> setVisibal(!visibal)}> <FontAwesomeIcon icon={faBars} className='text-gray-500' />
-          </a></li>
+          </a>
+          </li>
         <li>
           <a className="block py-2 px-3 rounded-sm "> <img
           
@@ -53,7 +54,7 @@ function Navbar() {
           </li>
       </ul>
     </div>
-    {visibal && (
+    {visibal &&(
     <Sidebar/>)
     }
    </nav>

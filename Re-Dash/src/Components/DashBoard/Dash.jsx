@@ -1,18 +1,16 @@
 import React from 'react'
 import './Dash.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPause, faStar } from '@fortawesome/free-solid-svg-icons'
-import {Crm} from "./Crm/Crm"
- import Table from "./Table/Table"
+import { faPause, faStar } from '@fortawesome/free-solid-svg-icons';
+import {Crm} from "../Crm/Crm"
+import Table from "../Table/Table"
 import "./Dash.css"
-import Navbar from './Navbar/Navbar'
- import Sidebar from "./Sidebar/Sidebar"
+import Navbar from '../Navbar/Navbar'
 
 function Dash() {
   return (
     <div>
       <Navbar />
-      {/* <Sidebar /> */}
       <div className="h-screen bg-gray-100 flex " id="container">
         <div className="lg:mx-76  h-screen">
           <h2 className="text-3xl font-bold mt-25">Ecommerce Dashboard</h2>

@@ -11,6 +11,22 @@
     margin-top: 63px;
 }
 
+#side{
+    position: inherit;
+}
+
+#iconic {
+    rotate: 90deg;
+    cursor: pointer;
+}
+
+.iconic {
+    display: flex;
+    justify-content: end;
+    margin-right: -20px;
+    width: 270px;
+}
+
 #Sidebar .sideItem{
     font-size: 14px;
     transition: all 100ms ease-in;

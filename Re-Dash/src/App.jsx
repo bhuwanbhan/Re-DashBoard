@@ -1,7 +1,7 @@
 import './App.css'
 
 import Reset from './Components/Auth/Reset'
- import { Crm } from './Components/Crm/Crm'
+//  import { Crm } from './Components/Crm/Crm'
 import Dash from './Components/DashBoard/Dash'
 
 
@@ -18,8 +18,8 @@ function App() {
   return (
     <>
      
-       <Navbar/>
-       <Sidebar/>
+       {/* <Navbar/>
+       <Sidebar/> */}
 
      <BrowserRouter>
         <Routes>
@@ -29,7 +29,7 @@ function App() {
              <Route path="/" element={<Dash/>} />
              <Route path="/otp" element={<OTP/>} />
             <Route path="/table" element={<Table />} />
-            <Route path="/contact" element={<Crm />} />
+            {/* <Route path="/contact" element={<Crm />} /> */}
           
         </Routes>
       </BrowserRouter> 

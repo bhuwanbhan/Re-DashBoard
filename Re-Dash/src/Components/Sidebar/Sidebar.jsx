@@ -33,7 +33,7 @@ export const Sidebar = () => {
   const [opened, setOpened] = useState(null);
 
   const toggle = (index) => {
-    if (opened === index) {
+    if (opened == index) {
       return setOpened(null);
     }
     setOpened(index);
@@ -210,8 +210,19 @@ export const Sidebar = () => {
       icon: <FontAwesomeIcon icon={faPieChart} />,
     },
   ];
+
+  const[show,setShow] = useState(true);
+
   return (
-    <div>
+    <div id="side">
+      <button onClick={()=>{
+        setShow(!show)
+      }}>
+        <div className="iconic">
+          <FontAwesomeIcon id="iconic" icon={faSortDown}/>
+        </div>
+        </button>
+        {show && 
       <div id="Sidebar">
         <ul>
           {sideItem1.map((item, index) => (
@@ -231,7 +242,7 @@ export const Sidebar = () => {
                   )}
                 </div>
               </div>
-                  <div className="drop">
+                <div className="drop">
                 {item.drop && opened === index && (
                   <div className="dropdown">
                     {item.drop.map((dropItem, dropIndex) => (
@@ -302,9 +313,8 @@ export const Sidebar = () => {
               )}
             </div>
           ))}
-          
         </ul>
-      </div>
+      </div>}
     </div>
   );
 };
