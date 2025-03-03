@@ -3,12 +3,10 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import pro from './pro.jpg'  
 import Sidebar from '../Sidebar/Sidebar'
+import "./Navbar.css"
 
 
 function Navbar() {
-  
-
-
   const[open, setOpen] = useState(false)
   const[visibal, setVisibal] = useState(true)
   const Menus = ["profile","help centre", "post activity", "setting", "your apps", "Signout"];
@@ -55,9 +53,11 @@ function Navbar() {
           </li>
       </ul>
     </div>
+    <div id='sideBar'>
     {visibal &&(
     <Sidebar/>)
     }
+    </div>
    </nav>
    </>
 
