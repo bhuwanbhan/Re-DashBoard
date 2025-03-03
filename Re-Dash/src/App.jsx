@@ -1,18 +1,22 @@
 import './App.css'
 
 import Reset from './Components/Auth/Reset'
-//  import { Crm } from './Components/Crm/Crm'
+ //import { Crm } from './Crm/Crm'
 import Dash from './Components/DashBoard/Dash'
 
 
 import { Table } from './Components/Table/Table'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+// import ProtectRoute from './Components/Auth/ProtectRoute'
+
 import Login from './Components/Auth/Login'
 
 import OTP from './Components/Auth/OTP'
 import SignUp from './Components/Auth/Reset'
 
 import Forget from './Components/Auth/Forget'
+
+
 
 function App() {
   return (
@@ -23,19 +27,22 @@ function App() {
 
      <BrowserRouter>
         <Routes>
+        {/* <Route path="/table" element={<Navbar />} /> */}
+        {/* <Route path="/table" element={<Sidebar />} /> */}
           <Route path="/login" element={<Login />} />
             {/* <Route path="/signup" element={<SignUp />} /> */}
             <Route path="/forget" element={<Forget/>} />
              <Route path="/" element={<Dash/>} />
              <Route path="/otp" element={<OTP/>} />
             <Route path="/table" element={<Table />} />
-            {/* <Route path="/contact" element={<Crm />} /> */}
+  
+
+         
+            {/* <Route path="/crm" element={<Crm/>} /> */}
           
         </Routes>
       </BrowserRouter> 
-
-
-  </>
+</>
    
   )
 }
