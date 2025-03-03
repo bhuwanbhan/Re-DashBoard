@@ -18,6 +18,28 @@ function Login() {
     navigate("/");
   };
 
+  const requests = axios.create({
+    baseURL: "http://10.10.10.111:8282/api/v1/auth/sign-in",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+     
+    },
+  });
+  
+  requests.interceptors.request.use(
+    (config) => {
+      const token = localStorage.getItem("token");
+      if (token) {
+        config.headers["Authorization"] = `Bearer ${token}`;
+      }
+      return config;
+    },
+    (error) => {
+      return Promise.reject(error);
+    }
+  )
+
   return (
     <section className="h-screen flex items-center justify-center">
       <div className=" h-130  container px-6 py-2 w-full max-w-4xl bg-white rounded-lg flex flex-wrap">
