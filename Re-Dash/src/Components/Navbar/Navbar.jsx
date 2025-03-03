@@ -7,6 +7,7 @@ import Sidebar from '../Sidebar/Sidebar'
 
 function Navbar() {
   
+  
 
   const[open, setOpen] = useState(false)
   const[visibal, setVisibal] = useState(true)
