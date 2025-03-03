@@ -19,13 +19,11 @@ import SignUp from './Components/Auth/Reset'
 import Forget from './Components/Auth/Forget'
 
 
+
 function App() {
   return (
     <>
-     
-    
-
-     <BrowserRouter>
+    <BrowserRouter>
         <Routes>
         <Route path="/table" element={<Navbar />} />
         <Route path="/table" element={<Sidebar />} />
@@ -35,14 +33,14 @@ function App() {
              <Route path="/" element={<Dash/>} />
              <Route path="/otp" element={<OTP/>} />
             <Route path="/table" element={<Table />} />
+  
+
          
             {/* <Route path="/crm" element={<Crm/>} /> */}
           
         </Routes>
       </BrowserRouter> 
-
-
-  </>
+</>
    
   )
 }
