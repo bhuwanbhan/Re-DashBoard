@@ -14,6 +14,12 @@ function Login() {
     navigate('/otp');
   };
 
+  try{
+
+  } catch(error){
+
+  }
+
   return (
     <section className=" h-screen  flex items-center justify-center w-full ">
       <div className="  h-130  container px-6 py-12 w-full max-w-4xl bg-white rounded-lg flex flex-wrap">
