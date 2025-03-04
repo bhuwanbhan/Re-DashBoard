@@ -31,7 +31,7 @@ function Login() {
 
         <div className="relative mb-4 mt-10">
               <label htmlFor="password" className="text-gray-600">
-                Password
+              Email
               </label>
               <div className="relative">
                 <input
@@ -43,11 +43,11 @@ function Login() {
                   required
                 />
                 <button
+                
                   type="button"
                   className="absolute right-3 top-3"
-                  onClick={() => setShowPassword(!showPassword)}
-                >
-                  {/* {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />} */}
+                  onClick={() => setShowPassword(!showPassword)}>
+                  {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
                 </button>
               </div>
             </div>
