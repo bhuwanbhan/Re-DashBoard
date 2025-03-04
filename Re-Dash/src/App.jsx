@@ -17,16 +17,19 @@ import OTP from './Components/Auth/OTP'
 import SignUp from './Components/Auth/Reset'
 
 import Forget from './Components/Auth/Forget'
+import { ToastContainer } from "react-toastify";
+
 
 
 
 function App() {
   return (
     <>
+      <ToastContainer />
     <BrowserRouter>
         <Routes>
         <Route path="/table" element={<Navbar />} />
-        <Route path="/table" element={<Sidebar />} />
+        <Route path="/sidebar" element={<Sidebar />} />
           <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/forget" element={<Forget/>} />
