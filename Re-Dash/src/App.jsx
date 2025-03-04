@@ -26,8 +26,6 @@ function App() {
       <ToastContainer />
     <BrowserRouter>
         <Routes>
-        <Route path="/table" element={<Navbar />} />
-        <Route path="/sidebar" element={<Sidebar />} />
           <Route path="/login" element={<Login />} />
             <Route path="/forget" element={<Forget/>} />
              <Route path="/" element={<Dash/>} />

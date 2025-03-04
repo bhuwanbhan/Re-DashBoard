@@ -1,14 +1,14 @@
 import "./Crm.css";
-import {
-  Chart as ChartJS,
-  BarElement,
-  CategoryScale,
-  LinearScale,
-  Tooltip,
-  Legend
-} from 'chart.js';
+// import {
+//   Chart as ChartJS,
+//   BarElement,
+//   CategoryScale,
+//   LinearScale,
+//   Tooltip,
+//   Legend
+// } from 'chart.js';
 
-import {Bar} from 'react-chartjs-2';
+// import {Bar} from 'react-chartjs-2';
 
 export const Crm = () => {
   return (
@@ -17,7 +17,7 @@ export const Crm = () => {
       <div id="container " >
         <div id="inner-container"  >
           <div id="yoo1">
-            <Bar></Bar>
+            {/* <Bar></Bar> */}
           </div>
           <div id="yoo2"></div>
           </div>
