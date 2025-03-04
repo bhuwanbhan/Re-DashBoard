@@ -13,7 +13,7 @@ import "./Crm.css";
 export const Crm = () => {
   return (
     <>
-    
+
     <div className="main-container">
       <div id="container " >
         <div id="inner-container"  >
@@ -27,6 +27,7 @@ export const Crm = () => {
           <div id="yoo4"></div>
           </div>
       </div>
+      
       </div>
     </>
   );
