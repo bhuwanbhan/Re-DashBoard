@@ -17,6 +17,10 @@
     margin-right: 20px;
 }
 
+#yoo1 BarChart{
+    position: static
+}
+
 @media (max-width:950px){
     #inner-container, #inner-container2{
         display: flex;

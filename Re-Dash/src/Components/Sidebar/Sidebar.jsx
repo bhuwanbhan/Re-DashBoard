@@ -54,31 +54,61 @@ export const Sidebar = () => {
     {
       title: "Ecommerce",
       icon: <FontAwesomeIcon icon={faCartShopping} />,
-      drop: [{ title: "Admin" }, { title: "SuperAdmin" }],
+      drop: [
+        { title: "Ecommerce", path: "/ecommerce" },
+        { title: "CRM", path: "/crm" },
+        { title: "Project Management", path: "/project_management" },
+        { title: "Social", path: "/social" },
+        { title: "Travel Agency", path: "/travel_agency" },
+      ],
     },
     {
       title: "CRM",
       path: "/crm",
       icon: <FontAwesomeIcon icon={faPhone} />,
       drop: [
-        { title: "Login", path: "/login" },
-        { title: "sign-up", path: "sign-up" },
+        { title: "Ecommerce", path: "/ecommerce" },
+        { title: "CRM", path: "/crm" },
+        { title: "Project Management", path: "/project_management" },
+        { title: "Social", path: "/social" },
+        { title: "Travel Agency", path: "/travel_agency" },
       ],
     },
     {
       title: "Project Management",
       path: "/project_management",
       icon: <FontAwesomeIcon icon={faFile} />,
+      drop: [
+        { title: "Ecommerce", path: "/ecommerce" },
+        { title: "CRM", path: "/crm" },
+        { title: "Project Management", path: "/project_management" },
+        { title: "Social", path: "/social" },
+        { title: "Travel Agency", path: "/travel_agency" },
+      ],
     },
     {
       title: "Travel Agency",
       path: "/travel_agency",
       icon: <FontAwesomeIcon icon={faSuitcase} />,
+      drop: [
+        { title: "Ecommerce", path: "/ecommerce" },
+        { title: "CRM", path: "/crm" },
+        { title: "Project Management", path: "/project_management" },
+        { title: "Social", path: "/social" },
+        { title: "Travel Agency", path: "/travel_agency" },
+      ],
     },
     {
       title: "Chat",
       path: "/chat",
       icon: <FontAwesomeIcon icon={faMessage} />,
+      drop: [
+        { title: "Ecommerce", path: "/ecommerce" },
+        { title: "CRM", path: "/crm" },
+        { title: "Project Management", path: "/project_management" },
+        { title: "Social", path: "/social" },
+        { title: "Travel Agency", path: "/travel_agency" },
+      ],
     },
     {
       title: "Email",
@@ -211,18 +241,8 @@ export const Sidebar = () => {
     },
   ];
 
-  const[show,setShow] = useState(true);
-
   return (
     <div id="side">
-      <button onClick={()=>{
-        setShow(!show)
-      }}>
-        <div className="iconic">
-          <FontAwesomeIcon id="iconic" icon={faSortDown}/>
-        </div>
-        </button>
-        {show && 
       <div id="Sidebar">
         <ul>
           {sideItem1.map((item, index) => (
@@ -242,7 +262,11 @@ export const Sidebar = () => {
                   )}
                 </div>
               </div>
-                <div className="drop">
+              <div className="drop" style={{
+                  maxHeight: opened === index ? "200px" : "0px",
+                  overflow: "hidden",
+                  transition: "max-height 400ms ease-in-out"
+}}>
                 {item.drop && opened === index && (
                   <div className="dropdown">
                     {item.drop.map((dropItem, dropIndex) => (
@@ -267,10 +291,10 @@ export const Sidebar = () => {
                   <span className="icon">{item.icon}</span> {item.title}
                 </div>
                 <div className="dropIcon">
-                  {opened === index ? (
-                    <FontAwesomeIcon id="arrowDown" icon={faGreaterThan} />
+                {opened === index ? (
+                    <FontAwesomeIcon id="arrowDown" icon={faSortDown} />
                   ) : (
-                    <FontAwesomeIcon id="arrow" icon={faGreaterThan} />
+                    <FontAwesomeIcon id="arrow" icon={faSortDown} />
                   )}
                 </div>
               </div>
@@ -297,10 +321,10 @@ export const Sidebar = () => {
                   <span className="icon">{item.icon}</span> {item.title}
                 </div>
                 <div className="dropIcon">
-                  {opened === index ? (
-                    <FontAwesomeIcon id="arrowDown" icon={faGreaterThan} />
+                {opened === index ? (
+                    <FontAwesomeIcon id="arrowDown" icon={faSortDown} />
                   ) : (
-                    <FontAwesomeIcon id="arrow" icon={faGreaterThan} />
+                    <FontAwesomeIcon id="arrow" icon={faSortDown} />
                   )}
                 </div>
               </div>
@@ -314,7 +338,7 @@ export const Sidebar = () => {
             </div>
           ))}
         </ul>
-      </div>}
+      </div>
     </div>
   );
 };

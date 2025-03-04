@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import login from "../Auth/login.jpg";
+import axios from 'axios';
 
 
 function Login() {
@@ -51,7 +52,7 @@ function Login() {
           <h2 className="text-2xl font-semibold text-center mb-6   mt-5 ">Login</h2>
 
           <div className="relative mb-4">
-            <div class="relative">
+            <div className="relative">
               <input
                 type="text"
                 id="floating_outlin"

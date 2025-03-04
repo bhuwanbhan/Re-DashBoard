@@ -21,25 +21,13 @@ import Forget from './Components/Auth/Forget'
 function App() {
   return (
     <>
-     
-       {/* <Navbar/>
-       <Sidebar/> */}
-
      <BrowserRouter>
         <Routes>
-        {/* <Route path="/table" element={<Navbar />} /> */}
-        {/* <Route path="/table" element={<Sidebar />} /> */}
           <Route path="/login" element={<Login />} />
-            {/* <Route path="/signup" element={<SignUp />} /> */}
             <Route path="/forget" element={<Forget/>} />
              <Route path="/" element={<Dash/>} />
              <Route path="/otp" element={<OTP/>} />
             <Route path="/table" element={<Table />} />
-  
-
-         
-            {/* <Route path="/crm" element={<Crm/>} /> */}
-          
         </Routes>
       </BrowserRouter> 
 </>

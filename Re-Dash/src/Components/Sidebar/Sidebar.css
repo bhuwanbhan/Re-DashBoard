@@ -29,7 +29,7 @@
 
 #Sidebar .sideItem{
     font-size: 14px;
-    transition: all 100ms ease-in;
+    transition: all 400ms ease-in;
     cursor: pointer;
 }
 

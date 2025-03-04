@@ -1,15 +1,14 @@
-import { faBars, faBell} from '@fortawesome/free-solid-svg-icons'
+import { faBars, faBell, faSortDown} from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import pro from './pro.jpg'  
 import Sidebar from '../Sidebar/Sidebar'
 import "./Navbar.css"
 
-
 function Navbar() {
   const[open, setOpen] = useState(false)
   const[visibal, setVisibal] = useState(true)
-  const Menus = ["profile","help centre", "post activity", "setting", "your apps", "Signout"];
+    const Menus = ["profile","help centre", "post activity", "setting", "your apps", "Signout"];
   return (
     <>
     <nav className=" border-y-1 bg-gray-200  w-full top-0 fixed">
@@ -53,14 +52,23 @@ function Navbar() {
           </li>
       </ul>
     </div>
-    <div id='sideBar'>
+   </nav>
+
+    <div id='sideBar' style={{
+  transform: visibal ? "translateX(0)" : "translateX(-100%)",
+  transition: 'transform 0.5s ease-in-out',
+  position: "fixed",
+  left: 0, 
+  top: 0, 
+  height: "100vh",
+  width: "15%",
+    }}>
     {visibal &&(
     <Sidebar/>)
     }
     </div>
-   </nav>
    </>
 
   )
 }
-export default Navbar;;
+export default Navbar;
