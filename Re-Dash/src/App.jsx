@@ -11,8 +11,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Login from './Components/Auth/Login'
 
-import Navbar from './Components/Navbar/Navbar'
-import Sidebar from './Components/Sidebar/Sidebar'
 import OTP from './Components/Auth/OTP'
 import SignUp from './Components/Auth/Reset'
 
@@ -29,20 +27,11 @@ function App() {
       <ToastContainer />
     <BrowserRouter>
         <Routes>
-        <Route path="/table" element={<Navbar />} />
-        <Route path="/sidebar" element={<Sidebar />} />
           <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
             <Route path="/forget" element={<Forget/>} />
              <Route path="/" element={<Dash/>} />
              <Route path="/otp" element={<OTP/>} />
             <Route path="/table" element={<Table />} />
-            <Route path="/ResetPassword" element={<ResetPassword />} />
-  
-
-         
-            {/* <Route path="/crm" element={<Crm/>} /> */}
-          
         </Routes>
       </BrowserRouter> 
 </>
