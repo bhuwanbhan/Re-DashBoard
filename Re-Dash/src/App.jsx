@@ -1,38 +1,41 @@
-
 import './App.css'
-import Login from './Components/Auth/Login'
+
 import Reset from './Components/Auth/Reset'
-import { Crm } from './Components/Crm/Crm'
+ //import { Crm } from './Crm/Crm'
 import Dash from './Components/DashBoard/Dash'
-import Home from './Components/Home/Home'
-import Navbar from './Components/Navbar/Navbar'
-import Sidebar from "./Components/Sidebar/Sidebar"
+
+
+import { Table } from './Components/Table/Table'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+// import ProtectRoute from './Components/Auth/ProtectRoute'
+
+import Login from './Components/Auth/Login'
+
+import OTP from './Components/Auth/OTP'
+import SignUp from './Components/Auth/Reset'
+
+import Forget from './Components/Auth/Forget'
+import { ToastContainer } from "react-toastify";
+
+
+
 
 function App() {
- 
-
-  return(
+  return (
     <>
-
-    <Navbar/>
-    <Sidebar/>
-    {/* <Login/> */}
-     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Dash/>}>
-          <Route path="/Login" element={<Login/>} />
-          <Route path="/blogs" element={<Reset />} />
-          <Route path="/contact" element={<Crm />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-
-  </> 
-    
-
-
+      <ToastContainer />
+    <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+            <Route path="/forget" element={<Forget/>} />
+             <Route path="/" element={<Dash/>} />
+             <Route path="/otp" element={<OTP/>} />
+            <Route path="/table" element={<Table />} />
+        </Routes>
+      </BrowserRouter> 
+</>
+   
   )
 }
 
-export default App
+export default App;

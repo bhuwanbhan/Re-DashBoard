@@ -9,6 +9,7 @@ function Home() {
     <Link to="/Navbar"><li>Navbar</li>  </Link>
     <Link to="/Sidebar"><li>SIdebar</li>  </Link>
     <Link to="/Main"> <li>Main</li>  </Link>
+    
 
 </nav>
   )
